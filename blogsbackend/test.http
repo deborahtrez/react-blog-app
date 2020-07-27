@@ -4,7 +4,7 @@
 # {
 #     "title": "My One Vaccation in Mali",
 #     "article": "Last vacation we went to Ooty. It was cold even though it was summer. But the weather was pleasant compared to the harsh summer in Kerala. We visited the Doddabetta peak. It is said that from the peek we can see the whole town. We then visited the Rose Gardens. It is situated in the heart of the city and has been beautifully laid out in terraces with rose tunnels, pergolas and bowers with rose creepers. Today it houses the largest collection of roses in the country, with around 3600 variety of roses. The next day, we visited the Botanical Gardens. It is one of the best tourist attractions with flourishing green well-maintained lawns, rare trees species such as a 20 million year old fossil tree, a monkey puzzle tree (monkeys can’t climb this tree), an Italian-style garden bordering an immense variety of flowering bushes, flowers, and plants, fern house with a vast range of ferns and orchids and a clear pool are some of the highlights of this garden. As we were walking through the garden we also got an opportunity to run for our life as a herd of cows came chasing us. On our way back to Kerala, we also clicked some pictures at the famous shooting spots Sixth mile and Ninth mile. But what I really enjoyed was the pleasant weather.",
-#     "author": "Aanyu Deborah Oduman"
+#     "author": "Aanyu Deborah "
 # }
 
 # POST http://localhost:6000/blogs/update:5f1c77613957172de895b13c http/1.1

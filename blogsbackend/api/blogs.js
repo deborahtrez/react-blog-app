@@ -26,7 +26,7 @@ router.post('/create', (request, response) => {
     })
 
     createBlog.save()
-    .then (blogs => {response.json(blogs)})
+    .then ((blog) => {response.json(blog)})
     .catch (error => {response.json(error)})
 })
 
