@@ -16,6 +16,6 @@
 #     "author": "Aanyu Deborah Oduman"
 # }
 
-GET http://localhost:6000/blogs http/1.1
+#GET http://localhost:6000/blogs http/1.1
  
  

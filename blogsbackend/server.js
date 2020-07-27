@@ -15,6 +15,6 @@ app.use(express.json())
 app.use(cors())
 app.use('/blogs', blogsUrls)
 
-app.listen(6000, () =>{
+app.listen(7000, () =>{
     console.log('Server is running')
 })

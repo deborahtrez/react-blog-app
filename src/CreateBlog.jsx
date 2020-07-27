@@ -21,24 +21,16 @@ class CreateBlog extends Component {
     }
 
     changedTitle(event){
-        this.setState({
-            title:event.target.value   
-        })
+        this.setState({ title:event.target.value })
     }
     changedArticle(event){
-        this.setState({
-            article:event.target.value
-        })
+        this.setState({ article:event.target.value })
     }
     changedAuthor(event){
-        this.setState({
-            author:event.target.value
-        })
+        this.setState({ author:event.target.value })
     }
     changedDate(date){
-        this.setState({
-            date:date
-        })
+        this.setState({ date:date })
     }
 
     onSubmit(event){
@@ -52,23 +44,23 @@ class CreateBlog extends Component {
         }
         console.log(blog)
 
-        axios.post('http://localhost:6000/blogs/create', blog)
-        .then(response => console.log(response.data))
+        axios.post('http://localhost:7000/blogs/create', blog)
+            .then(response => console.log(response.data))
 
-        window.location = '/'
+        // window.location = '/'
 
-        // this.setState ({
-        //     title: "",
-        //     article: "",
-        //     author: "" 
-        // })
+         this.setState ({
+            title: "",
+            article: "",
+            author: "" 
+         })
     }
 
         
     render() { 
         return ( 
             <div>
-                <form onSubmit = {this.onSubmit} className='formSize'>
+                <form onSubmit = {this.onSubmit} encType= 'multipart/form-data' className='formSize'>
                     
                     <div className="input-group input-group-lg">
                         <h3>Title</h3>
@@ -93,10 +85,11 @@ class CreateBlog extends Component {
                         className='form-group form-control'
                         />
                     </div>
-
+                    
+                    <input type='submit' value ='Create Blog' className='btn btn-outline-info' />
                 </form>
 
-                <input type='submit' value ='Create Blog' className='btn btn-outline-info' />
+               
             </div>
         
         );
