@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import axios from 'axios'
 import './index.css'
+import axios from 'axios'
 
 class CreateBlog extends Component {
     constructor() {
@@ -37,17 +37,18 @@ class CreateBlog extends Component {
         event.preventDefault()
         
         const blog = {
-            title: this.state.title,
-            article: this.state.article,
-            author: this.state.author,
+            title : this.state.title,
+            article : this.state.article,
+            author : this.state.author,
             date : this.state.date
         }
         console.log(blog)
 
         axios.post('http://localhost:7000/blogs/create', blog)
             .then(response => console.log(response.data))
+            .catch(error => console.log(error))
 
-        // window.location = '/'
+        //  window.location = '/'
 
          this.setState ({
             title: "",
@@ -60,21 +61,31 @@ class CreateBlog extends Component {
     render() { 
         return ( 
             <div>
-                <form onSubmit = {this.onSubmit} encType= 'multipart/form-data' className='formSize'>
+                <form onSubmit={this.onSubmit} className='formSize'>
                     
                     <div className="input-group input-group-lg">
                         <h3>Title</h3>
-                        <input type="text" onChange={this.changedTitle} value = {this.state.title} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"></input>
+                        <input type="text" 
+                                onChange={this.changedTitle} 
+                                value={this.state.title} 
+                                className="form-control" 
+                                aria-label="Sizing example input" 
+                                aria-describedby="inputGroup-sizing-lg" />
                     </div>
 
                     <div className="input-group">
                         <h4>Article</h4>
-                        <textarea onChange={this.changedArticle} value = {this.state.article} className="form-control" aria-label="With textarea"></textarea>
+                        <textarea onChange={this.changedArticle} value={this.state.article} className="form-control" aria-label="With textarea"></textarea>
                     </div>
 
                     <div className="input-group input-group-lg">
                         <h5>Author</h5>
-                        <input type="text" onChange={this.changedAuthor} value = {this.state.author} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"></input>
+                        <input type="text" 
+                                onChange={this.changedAuthor} 
+                                value={this.state.author} 
+                                className="form-control" 
+                                aria-label="Sizing example input" 
+                                aria-describedby="inputGroup-sizing-lg" />
                     </div>
 
                     <label>Date of Submission</label>
@@ -85,8 +96,10 @@ class CreateBlog extends Component {
                         className='form-group form-control'
                         />
                     </div>
-                    
-                    <input type='submit' value ='Create Blog' className='btn btn-outline-info' />
+
+                    <input type='submit' 
+                            value ='Submit' 
+                            className='btn btn-outline-info' />
                 </form>
 
                

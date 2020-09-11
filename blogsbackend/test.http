@@ -1,4 +1,4 @@
-# POST http://localhost:6000/blogs/create http/1.1
+# POST http://localhost:7000/blogs/create http/1.1
 # Content-Type: application/json 
 
 # {
@@ -7,7 +7,7 @@
 #     "author": "Aanyu Deborah "
 # }
 
-# POST http://localhost:6000/blogs/update:5f1c77613957172de895b13c http/1.1
+# POST http://localhost:7000/blogs/update:5f1c77613957172de895b13c http/1.1
 # Content-Type: application/json 
 
 # {
@@ -16,6 +16,6 @@
 #     "author": "Aanyu Deborah Oduman"
 # }
 
-#GET http://localhost:6000/blogs http/1.1
+GET http://localhost:7000/blogs/ http/1.1
  
  
