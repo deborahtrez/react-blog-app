@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class Blog extends Component {
-    
-    render() { 
-        return ( 
-            <div>
+
+    render() {
+        return (
+            <div class="card">
                 <h2>{this.props.blog.title}</h2>
                 <p>{this.props.blog.article}</p>
                 By <h6>{this.props.blog.author}</h6>
@@ -12,5 +12,5 @@ class Blog extends Component {
          );
     }
 }
- 
+
 export default Blog;
